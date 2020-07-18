@@ -3,14 +3,14 @@
 // const SearchForm = () => {
 //     return ( 
 //         <>
-//             <a id="eskimo-gototop" href="#"><i className="fa fa-chevron-up"></i></a>
+//             <a id="ny-gototop" href="#"><i className="fa fa-chevron-up"></i></a>
             
-//             <div id="eskimo-overlay"></div>
+//             <div id="ny-overlay"></div>
 
-//             <div id="eskimo-fullscreen-search">
-//                 <div id="eskimo-fullscreen-search-content">
-//                     <a href="#" id="eskimo-close-search"><i className="fa fa-times"></i></a>
-//                     <form role="search" method="get" action="search.html" className="eskimo-lg-form">
+//             <div id="ny-fullscreen-search">
+//                 <div id="ny-fullscreen-search-content">
+//                     <a href="#" id="ny-close-search"><i className="fa fa-times"></i></a>
+//                     <form role="search" method="get" action="search.html" className="ny-lg-form">
 //                         <div className="input-group">
 //                             <input type="text" className="form-control form-control-lg" placeholder="Enter a keyword..." name="s" />
 //                             <div className="input-group-append">

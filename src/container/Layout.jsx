@@ -31,8 +31,8 @@ const Layout = () => {
             
         // </Router>
         <>
-        <div id="eskimo-site-wrapper">
-        <div id="eskimo-main-container">
+        <div id="ny-site-wrapper">
+        <div id="ny-main-container">
             <div className="container">
         
         <Router>

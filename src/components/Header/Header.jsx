@@ -8,21 +8,21 @@ import {NavLink} from 'react-router-dom';
 const Header = () => {
     return ( 
         <>
-                        <div id="eskimo-sidebar">
-                    <div id="eskimo-sidebar-wrapper" className="d-flex align-items-start flex-column h-100 w-100">
+                        <div id="ny-sidebar">
+                    <div id="ny-sidebar-wrapper" className="d-flex align-items-start flex-column h-100 w-100">
                         
-                        <div id="eskimo-logo-cell" className="w-100">
-                            <a className="eskimo-logo-link" href="index.html">
-                                <img src={logo} className="eskimo-logo" alt="eskimo" />
+                        <div id="ny-logo-cell" className="w-100">
+                            <a className="ny-logo-link" href="index.html">
+                                <img src={logo} className="ny-logo" alt="ny" />
                             </a>
                         </div>
                         
-                        <div id="eskimo-sidebar-cell" className="w-100">
+                        <div id="ny-sidebar-cell" className="w-100">
                             
-                            <div id="eskimo-menu-toggle"><NavLink exact to="/" >Home</NavLink></div>
+                            <div id="ny-menu-toggle"><NavLink exact to="/" >Home</NavLink></div>
                             
-                            <nav id="eskimo-main-menu" className="menu-main-menu-container">
-                                <ul className="eskimo-menu-ul">
+                            <nav id="ny-main-menu" className="menu-main-menu-container">
+                                <ul className="ny-menu-ul">
                                     <li><NavLink exact to="/" >Home</NavLink>
                                         
                                     </li>
@@ -35,9 +35,9 @@ const Header = () => {
                     </div>
                 </div>
                 
-                <ul className="eskimo-top-icons">
-                    <li id="eskimo-search-icon">
-                        <NavLink id="eskimo-open-search" exact to="/search" ><img src={icon} alt=""/></NavLink>
+                <ul className="ny-top-icons">
+                    <li id="ny-search-icon">
+                        <NavLink id="ny-open-search" exact to="/search" ><img src={icon} alt=""/></NavLink>
                     </li>
                 </ul>
                 <div className="clearfix"></div>

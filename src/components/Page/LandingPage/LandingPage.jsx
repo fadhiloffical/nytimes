@@ -76,21 +76,21 @@ class LandingPage extends Component {
                <>
                 <div className="singlePage">
                 <div className="clearfix"></div>
-                <div className="eskimo-page-title">
+                <div className="ny-page-title">
                     <h1><span>{single_datas.title}</span></h1>
-                    <div className="eskimo-page-title-meta">
-                        <div className="eskimo-cat-meta">
+                    <div className="ny-page-title-meta">
+                        <div className="ny-cat-meta">
                             In {single_datas.section} &nbsp;
                         </div>
-                        <div className="eskimo-date-meta">&nbsp;{single_datas.subsection} &nbsp;</div>
-                        <div className="eskimo-date-meta"> &nbsp;{single_datas.published_date} &nbsp;</div>
+                        <div className="ny-date-meta">&nbsp;{single_datas.subsection} &nbsp;</div>
+                        <div className="ny-date-meta"> &nbsp;{single_datas.published_date} &nbsp;</div>
                     </div>
                 </div>
                 
-                <div className="eskimo-featured-img">
+                <div className="ny-featured-img">
                     <img src={single_datas.multimedia[0].url} alt=""/>
                 </div>
-                <div className="eskimo-page-content">
+                <div className="ny-page-content">
                     <p className="sub-title">{single_datas.byline}</p>
                     <p>{single_datas.abstract}</p>
                     <p>Type: {single_datas.item_type}</p>
@@ -152,7 +152,7 @@ export default LandingPage;
     
 //     return ( 
 //         <>
-//         <div className="eskimo-masonry-grid">
+//         <div className="ny-masonry-grid">
 
 //         </div>
 //         </>

@@ -3,10 +3,10 @@
     
     /* CALCULATE PAGE TITLE NEGATIVE MARGIN */
     var adjustPageTitle = function () {
-        var distance = $('#eskimo-main-container > .container').offset().left - 295;
-        $('#eskimo-main-container').find('.eskimo-page-title').css('margin-right', -distance);
-        $('#eskimo-main-container').find('.eskimo-page-title').css('padding-right', distance);
-        $('#eskimo-main-container').find('.eskimo-page-title').css('opacity', 1);
+        var distance = $('#ny-main-container > .container').offset().left - 295;
+        $('#ny-main-container').find('.ny-page-title').css('margin-right', -distance);
+        $('#ny-main-container').find('.ny-page-title').css('padding-right', distance);
+        $('#ny-main-container').find('.ny-page-title').css('opacity', 1);
     };
 
     /* HORIZONTAL CARD IMAGES */
@@ -22,13 +22,13 @@
     /* GO TO TOP BUTTON */
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 300) {
-            $("#eskimo-gototop").css('bottom', 0);
+            $("#ny-gototop").css('bottom', 0);
         } else {
-            $("#eskimo-gototop").css('bottom', '-50px');
+            $("#ny-gototop").css('bottom', '-50px');
         }
     });
     
-    $("#eskimo-gototop").on('click', function (e) {
+    $("#ny-gototop").on('click', function (e) {
         e.preventDefault();
         $("html, body").animate({
             scrollTop: 0
@@ -37,28 +37,28 @@
     });
     
     /* FULLSCREEN SEARCH */
-    $("#eskimo-open-search").on('click', function (e) {
+    $("#ny-open-search").on('click', function (e) {
         e.preventDefault();
-        $("#eskimo-fullscreen-search").fadeIn(200);
+        $("#ny-fullscreen-search").fadeIn(200);
     });
     
-    $("#eskimo-close-search").on('click', function (e) {
+    $("#ny-close-search").on('click', function (e) {
         e.preventDefault();
-        $("#eskimo-fullscreen-search").fadeOut(200);
+        $("#ny-fullscreen-search").fadeOut(200);
     });
 
     /* MAIN MENU */
-    $('#eskimo-main-menu').find(".eskimo-menu-ul > li > a").on('click', function () {
+    $('#ny-main-menu').find(".ny-menu-ul > li > a").on('click', function () {
         var nxtLink = $(this).next();
         if ((nxtLink.is('ul')) && (nxtLink.is(':visible'))) {
             nxtLink.slideUp(300);
-            $(this).removeClass("eskimo-menu-up").addClass("eskimo-menu-down");
+            $(this).removeClass("ny-menu-up").addClass("ny-menu-down");
         }
         if ((nxtLink.is('ul')) && (!nxtLink.is(':visible'))) {
-            $('#eskimo-main-menu').find('.eskimo-menu-ul > li > ul:visible').slideUp(300);
+            $('#ny-main-menu').find('.ny-menu-ul > li > ul:visible').slideUp(300);
             nxtLink.slideDown(300);
-            $('#eskimo-main-menu').find('.eskimo-menu-ul > li:has(ul) > a').removeClass("eskimo-menu-up").addClass("eskimo-menu-down");
-            $(this).addClass("eskimo-menu-up");
+            $('#ny-main-menu').find('.ny-menu-ul > li:has(ul) > a').removeClass("ny-menu-up").addClass("ny-menu-down");
+            $(this).addClass("ny-menu-up");
         }
         if (nxtLink.is('ul')) {
             return false;
@@ -68,17 +68,17 @@
     });
     
     /* MOBILE MENU */
-    $("#eskimo-menu-toggle").on('click', function () {
-        $("#eskimo-social-cell,#eskimo-main-menu").toggle();
+    $("#ny-menu-toggle").on('click', function () {
+        $("#ny-social-cell,#ny-main-menu").toggle();
     });
     
     /* EVENTS */
     $(document).ready(function () {
         adjustPageTitle();
         cardImages();
-        $('#eskimo-main-menu').find('.eskimo-menu-ul > li:has(ul) > a').addClass("eskimo-menu-down");
+        $('#ny-main-menu').find('.ny-menu-ul > li:has(ul) > a').addClass("ny-menu-down");
         $('body').find('select').addClass('custom-select');
-        $('body').find('.eskimo-masonry-grid').css('opacity', '1');
+        $('body').find('.ny-masonry-grid').css('opacity', '1');
     });
     
     $(window).on('resize orientationchange', function () {
@@ -86,7 +86,7 @@
     });
     
     $(window).on('load', function () {
-        var grid = $('body').find('.eskimo-masonry-grid');
+        var grid = $('body').find('.ny-masonry-grid');
         salvattore.rescanMediaQueries(grid);
     });
     
