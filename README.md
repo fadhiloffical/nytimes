@@ -13,4 +13,6 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-### `Created By npm start  [http://fadhil.in](Fadhil Asharaf) `
+### `Created By npm start Fadhil Asharaf `
+
+Website [http://fadhil.in](http://fadhil.in)
