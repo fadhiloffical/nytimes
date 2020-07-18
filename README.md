@@ -1,6 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+In the project, On main-page we used nytimes Api to fetch the most-popular news/article and in Search page we used searc api
+also by nytimes to fetch articles/news.
+
+
+## NYTIMES
 
 In the project directory, you can run:
 
