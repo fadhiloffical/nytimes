@@ -1,4 +1,8 @@
+/* ================= GOOGLE FONT ================== */
+
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400,400i,700,700i&subset=latin-ext');
+
+/* ================= GENERAL STYLES ================== */
 
 *,
 *::after,
@@ -7,6 +11,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html,
 body {
     padding: 0;
@@ -190,6 +195,49 @@ dd {
     margin-bottom: 1rem;
 }
 
+table {
+    margin: 2rem 0;
+    table-layout: auto;
+    width: 100%;
+}
+
+table:not([class]) {
+    border-collapse: collapse;
+}
+
+table:not([class]),
+table:not([class]) th,
+table:not([class]) td {
+    border: 1px solid #ddd;
+}
+
+table:not([class]) th,
+table:not([class]) td {
+    padding: 10px 15px;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #51cbce;
+    padding-left: 1.5rem;
+    margin-left: -1.5rem;
+    font-size: 120%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.fa {
+    font-weight: normal !important;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.hide-on-load {
+    overflow: hidden;
+    height: 0;
+}
 
 .ny-add-shadow {
     -webkit-box-shadow: 0 30px 50px 0 rgba(1, 1, 1, .2);
@@ -273,6 +321,8 @@ dd {
     border:none !important;
 }
 
+
+
 .card-title,
 .card-title a {
     color: #333333;
@@ -346,7 +396,6 @@ a.text-danger:hover {
 }
 
 
-
 /* ================= MODAL ================== */
 
 .modal {
@@ -389,17 +438,101 @@ a.text-danger:hover {
     padding: 2rem 2.5rem;
 }
 
-input[type="text"]:not(.form-control){
+/* ================= FORMS ================== */
+
+input {
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0px;
     color: inherit;
     font-size: 0.875rem;
     padding: 12px 15px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     display: block;
     width: 100%;
+    -webkit-transition: border 0.2s ease-in-out;
+    -moz-transition: border 0.2s ease-in-out;
     transition: border 0.2s ease-in-out;
+}
+
+/* ================= TOP ICON ================== */
+
+.ny-top-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:0;
+    right: 30px;
+    z-index: 99999;
+    background:#333;
+    border:1px solid rgba(255,255,255,0.05);
+    border:none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.ny-top-icons li {
+    display: block;
+    width: 50px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    -webkit-transition: background 0.2s cubic-bezier(0.34, 2, 0.6, 1);
+    -moz-transition: background 0.2s cubic-bezier(0.34, 2, 0.6, 1);
+    transition: background 0.2s cubic-bezier(0.34, 2, 0.6, 1);
+    color: #fff;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.ny-top-icons li:last-of-type{
+    border:none;
+}
+
+.ny-top-icons li a {
+    color: #fff;
+    display: block;
+    position: relative;
+}
+
+.ny-top-icons li a span {
+    background-color: #51cbce;
+    line-height: 20px;
+    height: 18px;
+    min-width: 18px;
+    font-size: 12px;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+}
+
+.ny-top-icons li a .fa {
+    -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+    -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+    -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+    -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.ny-top-icons li:hover .fa {
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    transform: scale(1.4);
 }
 
 /* ================= SIDEBAR ================== */
@@ -542,6 +675,7 @@ input[type="text"]:not(.form-control){
     transform: rotate(90deg);
     transform-origin: 50% 50%;
 }
+
 .ny-menu-ul > li > a:after {
     content: '';
     position: absolute;
@@ -609,6 +743,9 @@ input[type="text"]:not(.form-control){
     -ms-transform: scale(1.2);
     -moz-transform: scale(1.2);
 }
+
+/* ================= PAGE STRUCTURE ================== */
+
 #ny-site-wrapper {
     position: relative;
     padding-left: 310px;
@@ -631,6 +768,7 @@ input[type="text"]:not(.form-control){
     -webkit-transition: opacity 0.2s ease-in-out;
     -moz-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
+    opacity: 1;
 }
 
 .ny-page-title h1 {
@@ -750,6 +888,9 @@ input[type="text"]:not(.form-control){
     margin-bottom: 60px;
 }
 
+
+/* ================= CARDS ================== */
+
 .card {
     border-radius: 2px;
     box-shadow: none;
@@ -783,6 +924,13 @@ input[type="text"]:not(.form-control){
 
 .card-title {
     margin-bottom: 1rem;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
@@ -829,6 +977,17 @@ input[type="text"]:not(.form-control){
     line-height: 1.4;
 }
 
+.card .fa-circle {
+    font-size: 0.3rem;
+    vertical-align: 0.15rem;
+    width: 15px;
+    text-align: center;
+}
+
+.card-reading .fa {
+    width: 20px;
+    text-align: center;
+}
 
 .card .card-footer a {
     color: inherit;
@@ -964,12 +1123,187 @@ input[type="text"]:not(.form-control){
 .card-small .card-footer {
     padding: 1.5rem;
 }
-@media only screen and (max-height: 700px) {
+
+/* ================= MASONRY ================== */
+
+.ny-column {
+    float: left;
+}
+
+.size-1of1 {
+    width: 100%;
+}
+
+.size-1of2 {
+    width: 50%;
+}
+
+.size-1of3 {
+    width: 33.333%;
+}
+
+.size-1of4 {
+    width: 25%;
+}
+
+.ny-masonry-grid {
+    position: relative;
+    width: auto;
+    height: auto;
+    vertical-align: bottom;
+    margin: 0px -30px;
+    min-width: 100%;
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+
+.ny-masonry-grid > div {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.ny-masonry-grid .card-masonry {
+    padding: 0px 30px;
+    margin-bottom: 60px;
+}
+
+.ny-masonry-grid.small-masonry {
+    margin: 0px -20px;
+}
+
+.ny-masonry-grid.small-masonry .card-masonry {
+    padding: 0px 20px;
+    margin-bottom: 40px;
+}
+
+.ny-one-column[data-columns]::before {
+    content: '1 .ny-column.size-1of1';
+}
+
+.ny-two-columns[data-columns]::before {
+    content: '2 .ny-column.size-1of2';
+}
+
+.ny-three-columns[data-columns]::before {
+    content: '3 .ny-column.size-1of3';
+}
+
+.ny-four-columns[data-columns]::before {
+    content: '4 .ny-column.size-1of4';
+}
+
+.ny-one-column[data-columns]::before,
+.ny-two-columns[data-columns]::before,
+.ny-three-columns[data-columns]::before {
+    visibility: hidden;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .ny-two-columns[data-columns]::before {
+        content: '2 .ny-column.size-1of2';
+    }
+    .ny-three-columns[data-columns]::before {
+        content: '3 .ny-column.size-1of3';
+    }
+    .ny-four-columns[data-columns]::before {
+        content: '4 .ny-column.size-1of4';
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+    .ny-four-columns[data-columns]::before {
+        content: '3 .ny-column.size-1of3';
+    }
+    .ny-three-columns[data-columns]::before,
+    .ny-two-columns[data-columns]::before {
+        content: '2 .ny-column.size-1of2';
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .ny-four-columns[data-columns]::before {
+        content: '2 .ny-column.size-1of2';
+    }
+    .ny-three-columns[data-columns]::before,
+    .ny-two-columns[data-columns]::before {
+        content: '1 .ny-column.size-1of1';
+    }
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+@media only screen and (max-width: 1399px) {
+    .card-horizontal-left,
+    .card-body {
+        padding: 2rem;
+    }
+    .card .card-footer {
+        padding: 1.5rem 2rem;
+    }
+    .card-small .card-footer {
+        padding: 1.5rem;
+    }
+    .ny-top-icons {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        float: right;
+        margin-bottom: 40px;
+        border:none;
+    }
+    .ny-top-icons li {
+        display: inline-block;
+        border-left:1px solid rgba(255,255,255,0.1);
+        margin:0;
+        width:50px;
+        height: 50px;
+        float: left;
+        line-height: 50px;
+        font-size:16px;
+    }
+    .ny-top-icons li:last-of-type{
+        border:none;
+    }
     #ny-sidebar .ny-logo-link {
         padding: 40px;
     }
+    #ny-main-container {
+        padding: 60px 45px;
+    }
+    #ny-footer {
+        padding: 0 45px;
+    }
+    #ny-gototop {
+        display: none;
+    }
+    .ny-top-icons li {
+        float: right;
+    }
+    .ny-masonry-grid {
+        margin: 0px -20px;
+    }
+
+    .ny-masonry-grid .card-masonry {
+        padding: 0px 20px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #ny-sidebar .ny-logo-link {
+        padding: 10px;
+    }
     .ny-menu-ul li {
         padding: 15px 40px;
+    }
+    div#ny-menu-toggle a {
+        text-decoration: none;
     }
 }
 
@@ -1021,6 +1355,242 @@ input[type="text"]:not(.form-control){
         padding:2.5rem !important;
         margin-left:0px !important;
         margin-right:0px !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    h1,
+    .h1 {
+        font-size: 2.15rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 1.9rem;
+    }
+    #ny-main-container {
+        padding: 60px 0px;
+    }
+    .card-horizontal .card-body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card-horizontal-left,
+    .card-horizontal-right {
+        display: block;
+        width: 100%;
+    }
+    .card-horizontal-left {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .card-horizontal-right {
+        height: 400px
+    }
+    .ny-page-title.ny-author-title span {
+        padding-left: 75px
+    }
+    .ny-page-title img {
+        width: 60px;
+        height: 60px;
+    }
+    .ny-footer-wrapper {
+        padding: 60px 0px;
+    }
+    .ny-slider-desc {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+    .ny-slider-desc-inner:before {
+        display: none;
+    }
+    .ny-slider-desc-inner {
+        padding: 2rem;
+    }
+    .slick-slide .ny-slider-desc,
+    .slick-slide .ny-slider-image-meta {
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    .ny-slider-desc p,
+    .ny-slider-desc .card-title {
+        white-space: normal;
+        text-overflow: unset;
+        overflow: hidden;
+    }
+    .ny-slider-desc .card-title {
+        margin-bottom: 1rem;
+    }
+    .ny-slider-desc p {
+        font-size: 1rem;
+    }
+    .ny-page-title,.card.card-horizontal {
+        margin-bottom:40px
+    }
+    .ny-slider {
+        margin-bottom:60px
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .card-horizontal-right {
+        height: 300px;
+    }
+    .ny-post-nav-link {
+        padding: 20px;
+    }
+    .tab-content {
+        padding: 2rem;
+    }
+    hr.section-divider {
+        margin-top:60px;
+        margin-bottom: 60px
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    html {
+        font-size: 14px;
+    }
+    blockquote {
+        margin: 2rem 0;
+        font-size: 100%;
+    }
+    #ny-sidebar {
+        margin-bottom: 40px;
+    }
+    .card-horizontal-right {
+        height: 250px
+    }
+    #ny-main-container {
+        padding: 40px 0px;
+    }
+    #ny-footer {
+        padding: 0px;
+    }
+    .ny-post-nav-link {
+        display: none;
+    }
+    .ny-post-nav-table > .ny-post-nav {
+        width: 100%;
+        height: 50px;
+    }
+    .ny-post-nav-wrapper {
+        margin-top: 40px;
+    }
+    .ny-post-nav-left-row {
+        border: none;
+    }
+    .ny_commentlist .ny_comment_wrapper > .ny_comment_wrapper .ny_comment {
+        padding-left: 0px;
+    }
+    .ny_commentlist .ny_comment_wrapper > .ny_comment_wrapper:before {
+        display: none;
+    }
+    .ny-panel-inner {
+        padding: 80px 40px;
+    }
+    .ny-panel-inner .ny-panel-close {
+        right: 40px;
+    }
+    .nav-tabs .nav-item {
+        width: 100%;
+        border: none !important;
+    }
+    .nav-tabs .nav-item a {
+        border: none !important;
+    }
+    .nav-tabs,
+    .nav-tabs .nav-link.active {
+        background: rgba(0, 0, 0, 0.05) !important;
+    }
+    .tab-content {
+        padding: 20px;
+    }
+    #ny-main-container {
+        padding: 15px 0px 40px 0px;
+    }
+    .ny-masonry-grid .card-masonry,
+    .card.card-horizontal {
+        margin-bottom: 40px;
+    }
+    #ny-share-buttons {
+        margin-top: 35px;
+    }
+    hr {
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+    .ny_comment_left {
+        display: none;
+    }
+    .ny_comment_right_inner {
+        padding: 0;
+    }
+    .ny-page-title {
+        padding:2rem !important;
+    }
+    #ny-menu-toggle {
+        padding: 20px;
+    }
+    #ny-menu-toggle:after {
+        right: 20px;
+    }
+    .ny-menu-ul li {
+        padding: 20px;
+    }
+    #ny-social-inner {
+        padding: 20px;
+    }
+    .ny-slider .slick-prev,
+    .ny-slider .slick-next {
+        top: 10px;
+    }
+    .ny-slider .slick-prev,
+    .ny-slider .slick-next {
+        width: 30px;
+        height: 30px;
+    }
+    .ny-slider .slick-prev:before,
+    .ny-slider .slick-next:before {
+        font-size: 16px;
+    }
+    .ny-slider .slick-next {
+        right: 10px;
+    }
+    .ny-slider .slick-prev {
+        left: auto;
+        right: 40px;
+    }
+    .ny-slider-image-meta {
+        left: 10px;
+        top: 10px;
+    }
+    .ny-slider-image-meta li .badge {
+        font-size: 0.875rem;
+    }
+    .ny-view-more .btn {
+        width: 100%;
+    }
+    .ny-carousel {
+        padding: 50px 0px 0px 0px;
+    }
+    .mp-accordion-title,
+    .mp-accordion-content {
+        padding: 20px !important;
+    }
+    .mp-accordion-title:after {
+        right: 20px !important;
+    }
+    .ny-footer-wrapper {
+        padding: 40px 0px;
     }
 }
 
